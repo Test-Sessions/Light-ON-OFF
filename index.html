@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      text-align: center;
+      background-color: aqua;
+    }
+    #on{
+     display: none;
+      position: absolute;
+    }
+    .images {
+      display: flex;
+      justify-content: center;
+    }
+    .images img {
+      width: 440px;
+      height: 400px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+    }
+    .buttons button {
+      margin: 30px 30px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Working on JavaScript</h2>
+  <div class="images">
+    <img src="on.png" alt="imageON" id="on">
+    <img src="off.png" alt="imageOFF" id="off">
+  </div>
+   <div class="buttons">
+    <button id="onbtn">
+      Turn Light on
+    </button>
+    <button id="offbtn">
+      Turn light off
+    </button>
+   </div>
+</body>
+
+<script>
+  let onLight = document.getElementById('on');
+  let offLight = document.getElementById('off');
+  let btnForOff = document.getElementById('offbtn')
+  let btnForOn = document.getElementById('onbtn')
+
+  btnForOn.addEventListener("click" , () => {
+    onLight.style.display = "block";
+  })
+ btnForOff.addEventListener("click" , () => {
+   onLight.style.display = "none";
+ })
+</script>
+</html>
